@@ -1,0 +1,33 @@
+package com.company;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+    Scanner keyboard = new Scanner(System.in);
+
+    int height = 0, row, column, space;
+    do {
+        System.out.println("Please enter a height 1-8: ");
+        height = keyboard.nextInt();
+    }
+    while (height <1 || height > 8);
+
+    for (row = 0; row < height; row++)
+    {
+        for (space = 0; space < height - row - 1; space++)
+        {
+            System.out.print(" ");  
+        }
+        for (column = 0; column <= row; column++)
+        {
+            System.out.print("#");
+        }
+        System.out.print("\n");
+
+    }
+    
+    
+
+
+      }
+}
